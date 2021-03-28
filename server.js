@@ -10,6 +10,9 @@ app.use('/', routes)
 
 let port = process.env.PORT
 
+const db = require("./app/models");
+db.sequelize.sync();
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
