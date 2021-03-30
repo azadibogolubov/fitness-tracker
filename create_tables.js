@@ -136,3 +136,5 @@ Diary.sync().then(() => {
 }).finally(() => {
     sequelize.close();
 });
+
+module.exports = { User, Ingredient, Recipe }
