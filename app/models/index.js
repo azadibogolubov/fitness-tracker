@@ -19,6 +19,9 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.diaries = require("./diary.model.js")(sequelize, Sequelize);
+db.ingredients = require("./ingredient.model.js")(sequelize, Sequelize);
+db.recipes = require("./recipe.model.js")(sequelize, Sequelize);
 db.users = require("./user.model.js")(sequelize, Sequelize);
 
 module.exports = db;
